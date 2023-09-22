@@ -14,6 +14,18 @@ export default function App() {
   const [confirmarSenha, setConfirmarSenha] = React.useState('')
   const [cpf, setCpf] = React.useState('')
 
+function handleInfo(){
+console.log(name);
+console.log(genero);
+console.log(dataNascimento);
+console.log(email);
+console.log(senha);
+console.log(idiomaCurriculo);
+console.log(user);
+console.log(confirmarSenha);
+console.log(cpf);
+}
+
 
   return (
     <View style={styles.container}>
@@ -27,7 +39,7 @@ export default function App() {
       <TextInput placeholder='CPF'style={styles.input} value={cpf} onChangeText={setCpf}></TextInput>
       <TextInput placeholder='Idioma do Currículo' style={styles.input} value={idiomaCurriculo} onChangeText={setIdioma}></TextInput>
       
-      <TouchableOpacity style={styles.button}><Text style={{color: "white"}}>Cadastrar</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => handleInfo()}><Text style={{color: "white"}}>Cadastrar</Text></TouchableOpacity>
     <View>
       <Text style={styles.info}>Nome: {name}</Text>
       <Text style={styles.info}>Genêro: {genero}</Text>
@@ -71,3 +83,4 @@ const styles = StyleSheet.create({
   fontWeight: 'bold'
   }
 });
+ 
